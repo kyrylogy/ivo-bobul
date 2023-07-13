@@ -145,8 +145,8 @@ class RandomImagePixelationDataset(Dataset):
                 "std": target_array.std()
             },
         }
-        standardized_pixelated_image = (pixelated_image - pixelated_image.mean()) / pixelated_image.std())
-        standardized_target_array = (target_array - target_array.mean()) / target_array.std())
+        standardized_pixelated_image = (pixelated_image - pixelated_image.mean()) / pixelated_image.std()
+        standardized_target_array = (target_array - target_array.mean()) / target_array.std()
         return standardized_pixelated_image, known_array, standardized_target_array, self.image_files[index], standardization_data
         return pixelated_image, known_array, target_array, self.image_files[index]
     

@@ -3,11 +3,11 @@
   "device": "cuda",
   "learning_rate": 1e-3,
   "weight_decay": 1e-5,
-  "n_updates": 5000,
+  "n_updates": 2000,
   "network_config": {
-    "n_hidden_layers": 4,
+    "n_hidden_layers": 10,
     "n_in_channels": 2,
     "n_kernels": 32,
-    "kernel_size": 7
+    "kernel_size": 3
   }
 }

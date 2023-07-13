@@ -34,7 +34,7 @@ def stack_with_padding(batch_as_list: list):
     target_arrays = []
     image_files = []
     
-    for pixelated_image, known_array, target_array, image_file in batch_as_list:
+    for pixelated_image, known_array, target_array, image_file, standardization_data in batch_as_list:
         shapes.append(pixelated_image.shape)  # Equal to known_array.shape
         pixelated_images.append(pixelated_image)
         known_arrays.append(known_array)
@@ -51,4 +51,4 @@ def stack_with_padding(batch_as_list: list):
         stacked_known_arrays[i, :channels, :height, :width] = known_arrays[i]
     
     return torch.from_numpy(stacked_pixelated_images), torch.from_numpy(
-        stacked_known_arrays), target_arrays, image_files
+        stacked_known_arrays), target_arrays, image_files, standardization_data
