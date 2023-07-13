@@ -35,7 +35,7 @@ class SimpleCNN(torch.nn.Module):
 
 class ResidualCNN(torch.nn.Module):
     
-    def __init__(self, n_in_channels: int = 1, n_hidden_layers: int = 3, n_kernels: int = 32, kernel_size: int = 7):
+    def __init__(self, n_in_channels: int = 1, n_hidden_layers: int = 3, n_kernels: int = 32, kernel_size: int = 7, scale_factor: int = 2):
         super().__init__()
         
         cnn = []
